@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-//using UnityEngine.InputSystem;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using Whisper;
 using Whisper.Utils;
 
 public class Microphone : MonoBehaviour
 {
-    //public InputActionReference gripInputActionReference;
+    public InputActionReference Abutton;
     public OpenAI openAI;
 
     public WhisperManager whisper;
@@ -25,16 +25,16 @@ public class Microphone : MonoBehaviour
         microphoneRecord.OnRecordStop += OnRecordStop;
         button.onClick.AddListener(OnButtonPressed);
     }
-    /*
+
     private void OnEnable()
     {
-        gripInputActionReference.action.started += OnGripButtonPressed;
+        Abutton.action.started += OnAButtonPressed;
     }
 
     private void OnDisable()
     {
-        gripInputActionReference.action.started -= OnGripButtonPressed;
-    }*/
+        Abutton.action.started -= OnAButtonPressed;
+    }
 
     private void OnButtonPressed()
     {
@@ -50,8 +50,8 @@ public class Microphone : MonoBehaviour
         }
     }
 
-    /*
-    private void OnGripButtonPressed(InputAction.CallbackContext context)
+
+    private void OnAButtonPressed(InputAction.CallbackContext context)
     {
         if (!microphoneRecord.IsRecording)
         {
@@ -63,7 +63,7 @@ public class Microphone : MonoBehaviour
             microphoneRecord.StopRecord();
             buttonText.text = "Record";
         }
-    }*/
+    }
 
     private async void OnRecordStop(AudioChunk recordedAudio)
     {

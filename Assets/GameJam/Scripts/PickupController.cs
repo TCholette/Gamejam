@@ -39,7 +39,6 @@ public class PickupController : MonoBehaviour
 
         pickupZone.transform.position = cam.transform.position + cam.transform.forward * 1.5f;
 
-
         if (Input.GetMouseButtonDown(0)) {
             if (heldObj == null) {
                 RaycastHit hit;

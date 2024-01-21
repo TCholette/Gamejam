@@ -10,8 +10,6 @@ public class CreateAICharacter : MonoBehaviour
 
     int i = 0;
 
-    public Handler handler;
-
     public List<AICharacter> aiList;
 
     public GameObject characterStyle;
