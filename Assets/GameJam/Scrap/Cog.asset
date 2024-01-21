@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24b59131dfae5a64b9ce01906980b8cc, type: 3}
+  m_Name: Cog
+  m_EditorClassIdentifier: 
+  scrapName: Cog
+  value: 5
+  scrapStyle: {fileID: 5093541298619424339, guid: 3be5f0ee41ed35946be9f14fa3eae76e, type: 3}

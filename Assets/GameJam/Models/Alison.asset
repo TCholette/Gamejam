@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45d72e37072728041bbb41802f53d82f, type: 3}
+  m_Name: Alison
+  m_EditorClassIdentifier: 
+  aiName: Alison
+  profession: Plumber
+  personality: Rude
+  voice: Justin
+  characterStyle: {fileID: 15754829117833784, guid: 940f8236d2ca6034b9cc6bf039e110aa, type: 3}
+  scrap: {fileID: 11400000, guid: 38e654ca2c2eda341a5e39f71daf82b9, type: 2}
