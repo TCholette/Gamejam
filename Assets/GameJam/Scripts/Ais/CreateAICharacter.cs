@@ -17,12 +17,16 @@ public class CreateAICharacter : MonoBehaviour
     public GameObject characterStyle;
     public GameObject aiCharacter;
 
+    public bool hasVoice;
+
 
     public AICharacter ai;
 
     public AICharacterInfo charInfoScript;
 
-    // Start is called before the first frame update
+    public OpenAI openAi;
+    public TextToSpeech textToSpeech;
+
     public void DisplayCharacter(string name) {
 
         Destroy(aiCharacter);
@@ -40,8 +44,9 @@ public class CreateAICharacter : MonoBehaviour
 
                 aiCharacter.transform.position = GetComponent<EventHandler>().placement.transform.position;
 
-                GetComponent<OpenAi>().voice = ai.voice;
-                GetComponent<OpenAi>().vendorName = ai.name;
+                textToSpeech.AIVoice = ai.voice;
+                openAi.StartConversation(ai.tag, ai.itemtag);
+          
             }
         }
 

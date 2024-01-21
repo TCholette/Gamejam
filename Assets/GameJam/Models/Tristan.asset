@@ -16,5 +16,7 @@ MonoBehaviour:
   profession: Plumber
   personality: Rude
   voice: Justin
+  tag: vendor4
+  itemtag: item4
   characterStyle: {fileID: 9008398953456012437, guid: d65d95de382cf0a42882acf254c4941f, type: 3}
   scrap: {fileID: 11400000, guid: 06425a563ace915469b6f98b44b87cf3, type: 2}

@@ -14,6 +14,9 @@ public class AICharacter : ScriptableObject {
 
     public string voice;
 
+    public string tag;
+    public string itemtag;
+
     public GameObject characterStyle;
 
     public Scrap scrap;

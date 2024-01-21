@@ -15,6 +15,8 @@ MonoBehaviour:
   aiName: Theo
   profession: AAA
   personality: AAA
-  voice: Joe
+  voice: Matthew
+  tag: vendor3
+  itemtag: item3
   characterStyle: {fileID: 433994568332242506, guid: 4313bf906cdf1cf428bb1b8e3bac481c, type: 3}
   scrap: {fileID: 11400000, guid: 6e66c4386970a7e41b358d616744d955, type: 2}

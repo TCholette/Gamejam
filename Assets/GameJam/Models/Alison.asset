@@ -15,6 +15,8 @@ MonoBehaviour:
   aiName: Alison
   profession: Plumber
   personality: Rude
-  voice: Justin
+  voice: Ivy
+  tag: vendor1
+  itemtag: item1
   characterStyle: {fileID: 15754829117833784, guid: 940f8236d2ca6034b9cc6bf039e110aa, type: 3}
   scrap: {fileID: 11400000, guid: 38e654ca2c2eda341a5e39f71daf82b9, type: 2}
