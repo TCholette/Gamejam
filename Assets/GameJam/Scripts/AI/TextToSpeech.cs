@@ -24,7 +24,7 @@ public class TextToSpeech : MonoBehaviour
         string conlang = LanguageTranslator.EnglishToConlang(OpenAI.text);
 
         Task conlangAudioTask = AWSAudio(conlang, AIVoice, conlangAudioSource);
-        await Task.Delay(5000);
+        await Task.Delay(4000);
         Task englishAudioTask = AWSAudio(OpenAI.text, "Gregory", englishAudioSource);
 
         await Task.WhenAll(englishAudioTask, conlangAudioTask);
