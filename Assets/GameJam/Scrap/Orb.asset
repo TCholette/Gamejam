@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24b59131dfae5a64b9ce01906980b8cc, type: 3}
   m_Name: Orb
   m_EditorClassIdentifier: 
-  scrapName: Motor
-  value: 2
+  scrapName: Orb
+  value: 180
   scrapStyle: {fileID: 4953785568624447755, guid: b07ecb995be7c6746b98dd763ce22cd3, type: 3}

@@ -34,7 +34,7 @@ public class TextToSpeech : MonoBehaviour
 
     private async Task AWSAudio(string text, string voice, AudioSource audioSource)
     {
-        var credentials = new BasicAWSCredentials("AKIAZQ3DUQMNN665ML54", "ZdbVA/xKowaWVq+JNdUtfVHFgPV6YVogZ4VDRlhS");
+        var credentials = new BasicAWSCredentials("AKIAZQ3DUQMNNTLAGUCI", "nDVgaJYjgAQH2343430tR6d3sB63XSRsPGBGM0Ik");
         var client = new AmazonPollyClient(credentials, RegionEndpoint.USEast1);
 
         var request = new SynthesizeSpeechRequest()

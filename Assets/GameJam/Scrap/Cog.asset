@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Cog
   m_EditorClassIdentifier: 
   scrapName: Cog
-  value: 5
+  value: 10
   scrapStyle: {fileID: 5093541298619424339, guid: 3be5f0ee41ed35946be9f14fa3eae76e, type: 3}

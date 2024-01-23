@@ -38,9 +38,11 @@ public class OpenAI : MonoBehaviour
     private string vendorName;
 
     public TextToSpeech tts;
+    public static bool hasStarted;
 
     public void StartConversation(string name, string item)
     {
+        hasStarted = true;
         string url = Base + "/";
 
         RequestInitializeVendor data = new RequestInitializeVendor();
@@ -63,7 +65,7 @@ public class OpenAI : MonoBehaviour
 
     public void GenerateResponse(string prompt)
     {
-        if (!string.IsNullOrEmpty(prompt))
+        if (!string.IsNullOrEmpty(prompt) && hasStarted)
         {
             ContinueConvAsync(prompt);
         }

@@ -7,6 +7,7 @@ public class EventHandler : MonoBehaviour {
 
     public float acc;
 
+    public GameObject logs;
 
     public float distance;
 
@@ -18,14 +19,21 @@ public class EventHandler : MonoBehaviour {
     public bool aiAgrees = false;
     public bool canEndBarter = false;
 
+    public string name2;
+
     public List<GameObject> characters;
 
     public GameObject desk;
 
 
+    public string state2;
+
+
     public bool accept;
     public bool deny;
 
+
+    public LogDisplay logs2;
 
     public string state = "tinker";
 
@@ -39,14 +47,18 @@ public class EventHandler : MonoBehaviour {
     public AICharacter character;
 
     public List<string> names = new List<string> { "Alison", "Syd", "Theo", "Tristan" };
+    public List<string> namesSave = new List<string> { "Alison", "Syd", "Theo", "Tristan" };
 
     public bool canContinue;
 
     public bool openDoor;
 
+
+
     // Start is called before the first frame update
     void Start() {
         state = "tinker";
+        state2 = "aa";
         tradeWorked = true;
         canContinue = true;
         openDoor = false;
@@ -55,17 +67,22 @@ public class EventHandler : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         switch (state) {
-
             case "tinker":
                 if (canContinue && openDoor) {
                     openDoor = false;
                     canContinue = false;
+
                     int a = Random.Range(0, names.Count);
                     GetComponent<CreateAICharacter>().DisplayCharacter(names[a]);
+                    name2 = names[a];
                     names.Remove(names[a]);
+                    if (names.Count <= 0) {
+                         names =  new List<string> { "Alison", "Syd", "Theo", "Tristan" };
+}
                     character = GetComponent<CreateAICharacter>().ai;
                     StartCoroutine(OpenSesame(distance));
                     StartCoroutine(StateTimer(1f, "walk in"));
+                    
                 }
 
 
@@ -77,25 +94,31 @@ public class EventHandler : MonoBehaviour {
                     tradeWorked = false;
                     //characterAnim.SetTrigger("speak");
                 }
+      
                     if (deny) {
                         deny = false;
                         tradeWorked = false;
                         StartCoroutine(StateTimer(0.5f, "barter"));
+                        OpenAI.hasStarted = false;
                     } else if (accept) {
                         accept = false;
                         tradeWorked = true;
                         StartCoroutine(StateTimer(0.5f, "barter"));
+                        OpenAI.hasStarted = false;
                     }
                 
 
 
                 break;
             case "barter":
+                state2 = "";
                 if (canContinue) {
                     canContinue = false;
                     if (tradeWorked) {
                         GetComponent<CreateScrap>().DisplayScrap(character.scrap);
+                       
                         StartCoroutine(StateTimer(0.5f, "walk out"));
+
                     } else {
                         StartCoroutine(StateTimer(0.1f, "walk out"));
                     }
@@ -151,6 +174,7 @@ public class EventHandler : MonoBehaviour {
         for (int i = 0; i < times; i++) {
             acc -= 0.002f;
             yield return new WaitForSeconds(acc);
+     
             curtains.transform.position += new Vector3(0, distance / times, 0);
         }
 

@@ -24,6 +24,7 @@ public class CreateAICharacter : MonoBehaviour
 
     public OpenAI openAi;
     public TextToSpeech textToSpeech;
+    public LogDisplay logDisplay;
 
     public void DisplayCharacter(string name) {
 
@@ -44,6 +45,10 @@ public class CreateAICharacter : MonoBehaviour
 
                 textToSpeech.AIVoice = ai.voice;
                 openAi.StartConversation(ai.tag, ai.itemtag);
+                while(GetComponent<EventHandler>().state == "walk in") {
+                    logDisplay.PlayLog();
+                }
+
           
             }
         }

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Motor
   m_EditorClassIdentifier: 
   scrapName: Motor
-  value: 2
+  value: 60
   scrapStyle: {fileID: 2037807298160017353, guid: 5b1528ce94b6c40419726863136cc780, type: 3}

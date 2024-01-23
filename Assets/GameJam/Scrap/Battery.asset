@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24b59131dfae5a64b9ce01906980b8cc, type: 3}
   m_Name: Battery
   m_EditorClassIdentifier: 
-  scrapName: Motor
-  value: 2
+  scrapName: Battery
+  value: 30
   scrapStyle: {fileID: 7488478254939992867, guid: 46c9e9df70af783448a339a272714a22, type: 3}
